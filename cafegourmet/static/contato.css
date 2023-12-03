@@ -1,0 +1,77 @@
+/* Reset de estilos padrão da página */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do corpo principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px;
+}
+
+.contact-info > div {
+    margin-bottom: 40px;
+}
+
+/* Estilo dos títulos e textos */
+.contact-info h1 {
+    color: #090917;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.contact-info p {
+    text-align: justify;
+    color: #555555;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 19.60px;
+    word-wrap: break-word;
+}
+
+.contact-info .info-label {
+    color: #783E00;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.contact-info .info-content {
+    color: #090917;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+/* Estilo do botão do chat */
+.chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white;
+    padding: 10px 20px; /* Reduzi o tamanho do preenchimento para torná-lo mais compacto */
+    border: 2px solid #3498db; /* Adicionei uma borda sólida */
+    border-radius: 5px; /* Reduzi a borda para um estilo mais sutil */
+    box-shadow: 0 0 10px rgb(73, 45, 2);
+}
+
+/* Efeito de hover para destacar o botão */
+.chat-button:hover {
+    background-color: #2980b9; /* Cor de fundo azul mais escura quando hover */
+    border-color: #2980b9; /* Cor da borda mais escura quando hover */
+}

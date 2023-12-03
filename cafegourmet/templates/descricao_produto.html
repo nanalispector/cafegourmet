@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css"> <!-- caminho do CSS -->
+    <script src="/static/javascript.js"></script> <!-- caminho do JavaScript -->
+    <title>Café Gourmet - Descrição do Produto</title>
+    <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="3FEsBBOu"></script>
+</head>
+<body class="common-style">
+    <header>
+        <button onclick="location.href='/contato'">Café Gourmet</button>
+        <button onclick="location.href='/'">Cardápio</button>
+    </header>
+    
+    <main>
+        <section id="descricao_produto" class="category">
+            {% for produto in produtos %}
+            <div>
+                <h2>{{ produto.Produto }}</h2>
+                <p><strong>Origem:</strong> {{ produto.nomeOrigem }}</p>
+                <img src="{{ url_for('static', filename=produto.Imagem) }}" alt="{{ produto.Produto }}">
+                <p>Preço: R$ {{ produto.Valor }}</p>
+                <p>{{ produto.Descrição }}</p>
+
+                <!-- Botões de compartilhamento do Twitter e Facebook -->
+                <div>
+                    <!-- Botão de compartilhamento do Twitter -->
+                    <a href="https://twitter.com/intent/tweet?url={{ url_for('detalhes_produto', idProduto=produto.idProduto) }}&text=Confira este produto: {{ produto.Produto }}" target="_blank" class="twitter-share-button">Tweetar</a>
+                    
+                    <!-- Botão de compartilhamento do Facebook -->
+                    <div class="fb-share-button" data-href="{{ url_for('detalhes_produto', idProduto=produto.idProduto) }}" data-layout="button" data-size="small">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url_for('detalhes_produto', idProduto=produto.idProduto) }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>

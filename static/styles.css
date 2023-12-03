@@ -1,0 +1,80 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Cor de fundo geral */
+    color: #000; /* Cor do texto principal (preto) */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #a8a8a7; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo dos botões */
+button,
+.category-button,
+#search-btn,
+.close-button {
+    background-color: #8b4513; /* Marrom claro */
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover nos botões */
+button:hover,
+.category-button:hover,
+#search-btn:hover, 
+.close-button:hover {
+    background-color: #6e3811; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 80px;
+}
+
+/* Estilo das categorias e informações gerais */
+.category,
+.contact-info,
+.product-item {
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos títulos */
+h1,
+h2,
+h3 {
+    color: #783E00;
+}
+
+/* Estilo da lista */
+ul {
+    list-style-type: none;
+}
+
+/* Estilo dos itens da lista */
+.product-item h3 {
+    color: #2e2e2e;
+}
+
+/* Estilo do preço do produto */
+.product-item p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #8b4513;
+}
+
