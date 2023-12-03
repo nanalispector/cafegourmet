@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify
 import sqlite3
 
 app = Flask(__name__, static_url_path='/static')
@@ -21,12 +21,6 @@ def query_db(query, args=(), one=False):
 def get_products():
     produtos = query_db('SELECT * FROM produtos')
     return jsonify([dict(produto) for produto in produtos])
-
-@app.route('/search_products', methods=['GET'])
-def search_products():
-    query = request.args.get('query', '').lower()
-    results = query_db('SELECT * FROM produtos WHERE LOWER(nome) LIKE ?', ('%' + query + '%',))
-    return jsonify([dict(produto) for produto in results])
 
 @app.route('/produto/<int:idProduto>')
 def detalhes_produto(idProduto):
