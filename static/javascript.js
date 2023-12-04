@@ -6,3 +6,12 @@ window.onload = function () {
 function redirectToDetails(url) {
     window.location.href = url;
 }
+
+// Função para limpar a pesquisa
+function clearSearch() {
+    var input = document.getElementById('searchInput');
+    input.value = '';
+
+    // Redireciona para a rota principal para exibir todos os produtos
+    window.location.href = '/';
+}

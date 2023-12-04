@@ -15,6 +15,14 @@
     </header>
     <main>
         <h1>Conheça nossos produtos</h1>
+        <div class="search-bar">
+            <form action="/" method="post">
+                <input type="text" id="searchInput" name="search_term" placeholder="Pesquisar por produto" {% if search_term %}value="{{ search_term }}"{% endif %}>
+                <button type="submit">Pesquisar</button>
+                <button type="button" onclick="clearSearch()">Limpar</button>
+            </form>
+        </div>
+
         <ul class="product-list">
             {% for produto in produtos %}
                 <li class="product-item" onclick="redirectToDetails('{{ url_for('detalhes_produto', idProduto=produto.idProduto)}}')">
